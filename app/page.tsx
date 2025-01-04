@@ -1,3 +1,4 @@
+'use client'
 import HeroSection from '@/components/HeroSection'
 import AboutUs from '@/components/Sections/AboutUs'
 import CustomeraJourney from '@/components/Sections/CustomeraJourney'

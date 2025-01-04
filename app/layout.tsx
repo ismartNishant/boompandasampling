@@ -8,7 +8,7 @@ import Header from "@/components/navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title:"Boom Sampling",
+  title: "Boompanda Sampling",
   description: "We disrtibute the sampling all over india",
   icons: {
     icon: "/favicon.ico",
@@ -30,16 +30,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className={clsx(
-          "min-h-screen bg-background  antialiased",
-        )}
-      >
+      <body className={clsx("min-h-screen bg-background  antialiased")}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-            <Header />
-            <main className=" mx-auto  pt-20">
-              {children}
-            </main>
-            <Footer />
+          <Header />
+          <main className=" mx-auto  pt-20">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
