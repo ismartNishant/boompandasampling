@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useRef, useState } from "react";
 import HeadingOne from "../Headings/HeadingOne";
 import { FaRegPlayCircle } from "react-icons/fa";
@@ -10,7 +10,6 @@ const SamplingExperience = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isControlsVisible, setIsControlsVisible] = useState(false);
 
-  // Function to handle play/pause
   const handlePlayClick = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -34,7 +33,7 @@ const SamplingExperience = () => {
           className="absolute inset-0 w-full h-full object-cover z-10"
           loop
           muted
-          controls={isControlsVisible} // Display controls once video starts playing
+          controls={isControlsVisible}
         >
           <source src="/party.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -42,19 +41,18 @@ const SamplingExperience = () => {
 
         {/* Custom Play Button Overlay */}
         {!isControlsVisible && (
-
-          <div className="absolute inset-0 flex items-center justify-center z-20 cursor-pointer">
-            <Zoom> 
+          <div className="absolute inset-0 flex items-center justify-center z-20">
+            <Zoom>
               <Button
-              isIconOnly
-              variant="ghost"
-              color="primary"
-              onClick={handlePlayClick}
-              className="h-36 w-36 text-6xl bg-primary/25"
-              radius="full"
-            >
-              <FaRegPlayCircle />
-            </Button>
+                isIconOnly
+                variant="ghost"
+                color="primary"
+                onClick={handlePlayClick}
+                className="h-36 w-36 text-6xl bg-primary/25 pointer-events-auto"
+                radius="full"
+              >
+                <FaRegPlayCircle />
+              </Button>
             </Zoom>
           </div>
         )}
