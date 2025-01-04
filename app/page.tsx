@@ -1,4 +1,4 @@
-import HeroSection from '@/components/Hero'
+import HeroSection from '@/components/HeroSection'
 import AboutUs from '@/components/Sections/AboutUs'
 import CustomeraJourney from '@/components/Sections/CustomeraJourney'
 import EnquireNow from '@/components/Sections/EnquireNow'
@@ -12,7 +12,7 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-       <HeroSection />
+      <HeroSection />
       <WhyPartnerWithUs />
       <PerksOfSampling />
       <AboutUs />
