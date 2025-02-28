@@ -7,10 +7,10 @@ import HeadingOne from "../Headings/HeadingOne";
 const AboutUs = () => {
   return (
     <section
-      className="px-4 pt-16 lg:pt-20 lg:px-20 space-y-3 lg:space-y-5"
+      className="p-5 pt-16 sm:pt-0 lg:p-24 "
       id="about-us"
     >
-      <div className="flex flex-col justify-center items-center gap-4 text-center">
+      <div className="flex flex-col justify-center items-center gap-10 text-center">
         <HeadingOne>
           What is Boompanda<span className="text-primary">Sampling </span>
         </HeadingOne>

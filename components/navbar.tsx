@@ -7,6 +7,7 @@ import { IoClose } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { Button } from "@/components/ui/button"
+import { usePathname } from "next/navigation";
 
 
 const Header = () => {
@@ -29,15 +30,19 @@ const Header = () => {
     };
   }, []);
 
+  const pathname = usePathname();
+  // Check if it's the home page
+  const isHomePage = pathname === '/';
   const links = [
-    { label: "About Us", link: "#about-us" },
-    { label: "How it Works", link: "#how-it-works" },
-    { label: "FAQs", link: "#FAQS" },
-    { label: "Enquire Now", link: "#enquire-now" },
+    { href: isHomePage ? "#about-us" : "/#about-us", label: "About Us" },
+    { href: isHomePage ? "#how-it-works" : "/#how-it-works", label: "How it Works" },
+    { href: isHomePage ? "#FAQS" : "/#FAQS", label: "FAQs" },
+    { href: isHomePage ? "#enquire-now" : "/#enquire-now", label: "Enquire-now" },
   ];
 
+
   return (
-    <header className={`w-full fixed top-0 z-50 overflow-hidden ${animateHeader ? "shadow-md" : ""} border-none `}>
+    <header className={`text-black w-full fixed top-0 z-50 overflow-hidden ${animateHeader ? "shadow-md" : ""} border-none `}>
       <div className={`w-full mx-auto relative flex items-center justify-between  duration-500 xl:px-16 ease-in ${animateHeader ? "p-3 lg:p-5  bg-white" : "p-3 lg:p-8 "}`}
       >
         <Zoom>
@@ -55,12 +60,12 @@ const Header = () => {
           </Link>
         </Zoom>
 
-        <nav className="hidden xl:flex justify-center space-x-4 text-xs uppercase tracking-wider font-black">
+        <nav className="hidden xl:flex justify-center space-x-4 text-xs font-medium uppercase tracking-wider ">
           {links.map((link, index) => (
             <Slide key={link.label} delay={index * 100} direction="down">
               <Link
                 className={`hover:text-primary shadow p-2 px-4 rounded-full bg-primary-50/50 relative  no-underline after:rounded-md after:absolute after:h-0.5 after:left-0 after:-bottom-2 after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in group duration-300 ease-in transition-all`}
-                href={link.link}
+                href={link.href}
               >
                 {link.label}
               </Link>
@@ -70,10 +75,10 @@ const Header = () => {
 
         <button
           className=" xl:hidden items-center rounded-md text-primary  border-2 border-primary p-1"
-        
+
           onClick={() => setIsOpen(true)}
         >
-          <CgMenuRight  className="text-2xl"/>
+          <CgMenuRight className="text-2xl" />
         </button>
       </div>
 
@@ -90,15 +95,15 @@ const Header = () => {
               className="absolute top-3 right-3 rounded-md text-primary  border-2 border-primary p-1 "
               onClick={() => setIsOpen(false)}
             >
-              <IoClose  className="text-2xl"/>
+              <IoClose className="text-2xl" />
             </button>
 
-            <nav className="flex flex-col  space-y-10  text-xl font-extrabold pt-20">
+            <nav className="flex flex-col  space-y-12  text-2xl font-semibold  pt-20">
               {links.map((link) => (
                 <Link
                   key={link.label}
                   className={`hover:text-primary relative tracking-wide no-underline after:rounded-md after:absolute after:h-1 after:left-0 after:-bottom-2 after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in group duration-300 ease-in transition-all`}
-                  href={link.link}
+                  href={link.href}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

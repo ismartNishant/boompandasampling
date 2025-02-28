@@ -4,26 +4,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { Player } from '@lottiefiles/react-lottie-player';
 import { Slide, Zoom } from "react-awesome-reveal";
+import { useRef, useState } from "react";
 
 const HeroSection: React.FC = () => {
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <section className=" px-4 mx-auto sm:px-20 py-5 relative">
       <div className="grid items-center grid-cols-1 gap-20 lg:gap-5 lg:grid-cols-2">
         <div className="space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-2 lg:space-y-4">
             <Slide direction="up">
-              <p className="text-xl font-extrabold tracking-wider text-primary  font-tsukimi ">
+              <p className="text-2xl font-medium tracking-wider text-primary ">
                 India&apos;s Premier Physical
               </p>
             </Slide>
             <Slide direction="down">
-              <h1 className=" text-5xl font-bold text-black tracking-wider sm:text-[80px] leading-[55px] lg:leading-tight font-bubblegum ">
+              <h1 className=" text-[44px]  lg:text-[70px]  text-black font-bold font-anta leading-tight ">
                 Sampling Platform Revolutionizing Youth Engagement!
               </h1>
             </Slide>
             <Zoom>
               <div className="pt-2">
-                <div className="relative inline-flex sm:inline font-tsukimi font-extrabold text-base  xl:text-xl  text-gray-700 ">
+                <div className="relative inline-flex sm:inline font-medium text-lg  xl:text-xl  text-gray-700 ">
                   <span className="bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-lg filter opacity-30 w-full h-full absolute inset-0" />
                   <span className="relative ">
                     Transforming Your Try-Before-You-Buy Experience!
@@ -33,11 +45,11 @@ const HeroSection: React.FC = () => {
             </Zoom>
           </div>
 
-          <div className="max-w-fit relative">
+          <div className="max-w-fit relative z-20">
             <Zoom>
               <Button
                 as={Link}
-                className="inline-flex  h-10 lg:h-12 justify-center gap-2 items-center shadow-xl shadow-primary/15 text-lg lg:font-semibold isolation-auto border-primary   bg-primary hover:scale-95  text-white relative z-10 px-4 py-1 lg:py-2 overflow-hidden border-2 rounded-full group"
+                className="inline-flex  h-10 lg:h-12 justify-center gap-2 items-center shadow-xl shadow-primary/15 text-lg lg:font-semibold isolation-auto border-primary   bg-primary hover:scale-95  text-white relative  px-4 py-1 lg:py-2 overflow-hidden border-2 rounded-full group"
                 href="#enquire-now"
               >
                 Request Demo
@@ -53,27 +65,29 @@ const HeroSection: React.FC = () => {
                 </svg>
               </Button>
             </Zoom>
-              <Player
-                className="w-24 lg:w-36 absolute top-14 -right-20 xl:-right-28"
-                autoplay
-                loop
-                src="/Images/arrow.json"
-              >
-              </Player>
+            <Player
+              className="w-24 lg:w-36 absolute top-14 -right-20 xl:-right-28"
+              autoplay
+              loop
+              src="/Images/arrow.json"
+            >
+            </Player>
           </div>
         </div>
 
-        <div className="z-10 w-full max-w-xl ml-auto">
-          <Image
-            alt="Hero Image"
-            className="w-full"
-            height={500} // Adjust the dimensions as needed
-            src="/Images/hero-img.png"
-            width={800}
-          />
+        <div className="z-10 w-full ml-auto">
+          <video
+            className="w-full h-full object-cover"
+           autoPlay loop muted playsInline 
+          
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
+
       </div>
-      <div className="absolute bottom-0 right-0 overflow-hidden z-0">
+      <div className="absolute bottom-0 right-0 overflow-hidden ">
         <Image
           alt="Background Pattern"
           className="w-full h-auto origin-bottom-right transform scale-150 lg:w-auto lg:object-cover lg:scale-75"

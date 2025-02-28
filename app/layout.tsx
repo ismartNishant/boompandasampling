@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className={clsx("min-h-screen bg-background  antialiased")}>
+      <body className={clsx("min-h-screen bg-background text-black  antialiased")}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Header />
           <main className=" mx-auto  pt-20">{children}</main>

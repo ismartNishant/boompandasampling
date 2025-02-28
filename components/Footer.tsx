@@ -1,14 +1,19 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Slide, Zoom } from "react-awesome-reveal";
 
 const Footer = () => {
-    const companyLinks = [
-        { label: "About Us", link: "#about-us" },
-        { label: "How it Works", link: "#how-it-works" },
-        { label: "FAQs", link: "#FAQS" },
-        { label: "Enquire Now", link: "#enquire-now" },
-    ];
+   const pathname = usePathname();
+     // Check if it's the home page
+     const isHomePage = pathname === '/';
+     const links = [
+       { href: isHomePage ? "#about-us" : "/#about-us", label: "About Us" },
+       { href: isHomePage ? "#how-it-works" : "/#how-it-works", label: "How it Works" },
+       { href: isHomePage ? "#FAQS" : "/#FAQS", label: "FAQs" },
+       { href: isHomePage ? "#enquire-now" : "/#enquire-now", label: "Enquire-now" },
+     ];
 
     const legalLinks = [
         { label: "Privacy Policy", link: "/privacy-policy" },
@@ -43,13 +48,13 @@ const Footer = () => {
 
 
                 <div className="space-y-2 lg:space-y-4">
-                    <h4 className="text-3xl uppercase font-semobold tracking-wide text-gray-800 bebas-neue-regular">Company</h4>
+                    <h4 className="text-2xl uppercase font-bold tracking-wide text-gray-800 ">Company</h4>
                     <ul className="space-y-2">
-                        {companyLinks.map((link, index) => (
+                        {links.map((link, index) => (
                             <Slide key={index} delay={index * 100} direction="down">
                                 <li>
                                     <Link
-                                        href={link.link}
+                                        href={link.href}
                                         className="text-gray-600 hover:text-primary transition-colors font-semibold"
                                     >
                                         {link.label}
@@ -62,7 +67,7 @@ const Footer = () => {
 
                 {/* Third Column */}
                 <div className="space-y-2 lg:space-y-4">
-                    <h4 className="text-3xl uppercase font-semobold tracking-wide text-gray-800 bebas-neue-regular">Legal</h4>
+                    <h4 className="text-2xl uppercase font-bold tracking-wide text-gray-800">Legal</h4>
                     <ul className=" space-y-2">
                         {legalLinks.map((link, index) => (
                             <Slide key={index} delay={index * 100} direction="down">

@@ -38,10 +38,10 @@ const perksData = [
 const PerksOfSampling = () => {
     return (
         <section className="px-4 pt-14 lg:px-20 lg:space-y-5">
-            <HeadingOne>Perks of Sampling</HeadingOne>
+            <HeadingOne>Perks of Boom Sampling</HeadingOne>
             <div className="space-y-10">
                 <Fade>
-                    <p className="text-gray-600 font-extrabold  w-full lg:w-1/2  test-base lg:text-lg">
+                    <p className="text-gray-600 font-medium w-full lg:w-1/2  test-base lg:text-xl">
                         Strategised campaigns to target the right audience, understand sentiments, and use those findings for a cost-effective launch.
                     </p>
                 </Fade>
@@ -60,9 +60,9 @@ const PerksOfSampling = () => {
                             </Zoom>
 
                             {/* Content Section */}
-                            <Fade  className='w-full lg:w-1/2'>
+                            <Fade  className='w-full lg:max-w-2xl'>
                                 <div className="flex flex-col gap-3 lg:gap-5 justify-center  bg-gradient-to-br from-primary-300  px-2 lg:px-5 py-5 lg:py-16 to-primary text-white rounded-xl">
-                                    <Slide direction='down'> <h2 className="text-4xl lg:text-5xl font-semibold font-bubblegum">{perk.title}</h2></Slide>
+                                    <Slide direction='down'> <h2 className="text-4xl lg:text-5xl font-semibold">{perk.title}</h2></Slide>
                                     <Slide direction='down'><p className="text-lg">{perk.description}</p></Slide>
                                 </div>
                             </Fade>

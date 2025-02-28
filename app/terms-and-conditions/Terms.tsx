@@ -5,7 +5,7 @@ const TermsAndConditions = () => {
   return (
     <div className="px-4 max-w-screen-lg mx-auto pt-6 md:pt-">
       <div className="flex flex-col gap-3 border-b-2 border-gray-300 pb-8">
-        <h1 className=" text-3xl md:text-6xl text-primary font-semibold tracking-wider font-bubblegum">
+        <h1 className=" text-3xl md:text-6xl text-primary font-semibold tracking-wider">
           Terms and Conditions
         </h1>
         <div className="flex items-center gap-2 text-base font-semibold tracking-wide text-gray-700">

@@ -1,40 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bubblegum+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Tsukimi+Rounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Bebas+Neue&family=Gabarito:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
   scroll-behavior: smooth;
-  font-family: "Tsukimi Rounded", serif;
+  font-family: "Inter", serif;
 }
 
 @layer base {
   .bg-img {
-    background-image: url('/Images/bg.png');
+    background-image: url("/Images/bg.png");
     background-size: cover;
     background-position: center;
   }
 
-  .font-nunito {
-    font-family: "Nunito", serif;
+  .font-audiowide {
+    font-family: "Audiowide", serif;
   }
-
-  .bebas-neue-regular {
+  .font-anta {
+    font-family: "Anta", serif;
+  }
+  .font-bebas-neue {
     font-family: "Bebas Neue", serif;
   }
-
-  .font-tsukimi {
-    font-family: "Tsukimi Rounded", serif;
+  
+  .font-gabarito {
+    font-family: "Gabarito", serif;
   }
-
-  .font-orbitron {
-    font-family: "Orbitron", serif;
-  }
-
-  .font-bubblegum {
-    font-family: "Bubblegum Sans", serif;
-  }
-
 
   :root {
     --background: 0 0% 100%;
@@ -64,4 +57,3 @@ html {
     --radius: 0.5rem;
   }
 }
-

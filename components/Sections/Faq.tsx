@@ -56,19 +56,19 @@ const Faq = () => {
             <div className='w-full mx-auto max-w-screen-lg '>
             
                     <Accordion variant="splitted" selectionMode="multiple"
-                        className="gap-4 lg:gap-5  flex flex-col px-0"
+                        className="gap-4  lg:gap-5  flex flex-col px-0"
                         defaultExpandedKeys={["0"]}
                         itemClasses={{
-                            base: " text-start lg:p-4",
-                            title: `text-xl lg:text-3xl  uppercase font-medium bebas-neue-regular `,
+                            base: "bg-white text-start lg:p-4",
+                            title: `text-xl lg:text-2xl  uppercase font-semibold `,
                             indicator: "text-primary text-3xl  data-[open=true]:-rotate-90 ",
                             trigger: " flex items-start  ",
-                            content: 'pt-0 text-gray-500 text-sm lg:text-base font-semibold'
+                            content: 'pt-0 text-gray-500 text-sm lg:text-base font-medium'
                         }}>
                         {faqs.map((faq, index) => (
 
                             <AccordionItem key={index} aria-label={`Accordion ${index + 1}`} title={faq.question} indicator={<HiChevronDoubleDown />}>
-                                <Fade direction='down'><p>{faq.answer}</p></Fade>
+                                <p>{faq.answer}</p>
                             </AccordionItem>
 
                         ))}
