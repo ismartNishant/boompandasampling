@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 
 import Header from "@/components/navbar";
 import Footer from "@/components/Footer";
+import ScrollToTopWithProgress from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Boompanda Sampling",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <Header />
           <main className=" mx-auto  pt-20">{children}</main>
+          <ScrollToTopWithProgress />
           <Footer />
         </Providers>
       </body>

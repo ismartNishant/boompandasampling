@@ -44,13 +44,13 @@ const CustomeraJourney = () => {
 
 
     return (
-        <section className='px-4 pt-16 pb-10 lg:py-20  lg:px-20 space-y-5 lg:space-y-10' id='how-it-works'>
+        <section className='px-4 pt-16 pb-10 lg:py-20  lg:px-20 space-y-10' id='how-it-works'>
             <HeadingOne>Your customer&apos;s journey</HeadingOne>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 items-stretch p-2 xl:p-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10 sm:gap-5 items-stretch p-2 xl:p-0 mt-5">
                 {JourneyData.map((perk, index) => (
                     <Zoom key={perk.id} delay={index * 100} className={`rounded-xl p-4 h-full flex flex-col items-center  group  bg-gradient-to-r ${perk.lightGradient}`}>
                         <div className="overflow-visible px-2 lg:px-4 ">
-                            <div className={`absolute -top-4 -left-4 w-12 h-12 rounded-2xl 
+                            <div className={`absolute -top-4 text-xl -left-2 w-16 h-16 rounded-2xl 
                              bg-gradient-to-r ${perk.gradient} 
                              flex items-center justify-center text-white font-bold
                              shadow-lg transform -rotate-12 group-hover:rotate-0

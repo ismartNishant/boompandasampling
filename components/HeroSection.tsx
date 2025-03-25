@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className=" px-4 mx-auto sm:px-20 py-5 relative">
-      <div className="grid items-center grid-cols-1 gap-20 lg:gap-5 lg:grid-cols-2">
+      <div className="grid items-center grid-cols-1 gap-20 lg:gap-0 lg:grid-cols-2">
         <div className="space-y-8">
           <div className="space-y-2 lg:space-y-4">
             <Slide direction="up">
@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
               </p>
             </Slide>
             <Slide direction="down">
-              <h1 className=" text-[44px]  lg:text-[70px]  text-black font-bold font-anta leading-tight ">
+              <h1 className=" text-[44px]  lg:text-[68px] 2xl:text-[70px]   text-black font-semibold font-rubik leading-tight ">
                 Sampling Platform Revolutionizing Youth Engagement!
               </h1>
             </Slide>

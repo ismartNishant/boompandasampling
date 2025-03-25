@@ -3,14 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Slide, Zoom } from "react-awesome-reveal";
+import HeadingOne from "../Headings/HeadingOne";
 
-
-const HeadingOne = ({ children }: { children: React.ReactNode }) => (
-  <h1 className="text-4xl md:text-5xl font-bold text-center relative mb-16">
-    {children}
-    <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
-  </h1>
-);
 
 const WhyPartnerWithUs = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -99,7 +93,7 @@ const WhyPartnerWithUs = () => {
         animate="visible"
       >
         {data.map((item, index) => (
-          <Zoom key={item.id} delay={index * 100}  className="w-full max-w-sm">
+          <Zoom key={item.id} delay={index * 100}  className="w-full max-w-[350px] 2xl:max-w-sm">
             <motion.div
 
               variants={itemVariants}
@@ -109,17 +103,17 @@ const WhyPartnerWithUs = () => {
               }}
               onHoverStart={() => setHoveredCard(item.id)}
               onHoverEnd={() => setHoveredCard(null)}
-              className="flex flex-col p-6 rounded-2xl w-full h-full shadow-lg"
+              className="flex flex-col p-4 sm:p-6 rounded-2xl w-full h-full shadow-lg"
               style={{
                 backgroundColor: hoveredCard === item.id ? item.hoverColor : item.color,
                 transition: "all 0.3s ease"
               }}
             >
-              <div className="flex flex-col items-center gap-10 justify-center h-full">
+              <div className="flex flex-col items-center gap-5  justify-center h-full">
                 <motion.div
-                  className="relative w-32 h-32"
+                  className="relative w-32 h-32 lg:w-28 lg:h-28 2xl:w-32  2xl:h-32"
                   animate={{
-                    y: hoveredCard === item.id ? [0, -8, 0] : 0
+                    y: hoveredCard === item.id ? [0, -10, 0] : 0
                   }}
                   transition={{
                     duration: 1.5,
@@ -139,7 +133,7 @@ const WhyPartnerWithUs = () => {
                     className="absolute -inset-4 rounded-full opacity-50 -z-10"
                     style={{ backgroundColor: "white" }}
                     animate={{
-                      scale: hoveredCard === item.id ? [0.8, 1, 0.8] : 1,
+                      scale: hoveredCard === item.id ? [0.9, 1, 0.9] : 1,
                     }}
                     transition={{
                       duration: 2,
@@ -149,10 +143,10 @@ const WhyPartnerWithUs = () => {
                 </motion.div>
 
                 <div className="space-y-3 text-center">
-                  <h2 className="text-2xl font-bold text-gray-800">
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
                     {item.title}
                   </h2>
-                  <p className="font-medium text-gray-700">{item.description}</p>
+                  <p className="font-medium text-gray-500">{item.description}</p>
                 </div>
               </div>
             </motion.div>

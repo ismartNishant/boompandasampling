@@ -22,11 +22,11 @@ const SamplingExperience = () => {
   };
 
   return (
-    <section className="px-4 pt-16 lg:px-20 space-y-5 lg:space-y-10">
+    <section className="px-4 pt-16 lg:px-20 space-y-10">
       <HeadingOne>The sampling experience</HeadingOne>
 
       {/* Video container */}
-      <div className="relative w-full h-56 lg:h-[600px] overflow-hidden rounded-xl lg:rounded-3xl shadow-white mx-auto">
+      <div className=" relative w-full h-56 lg:h-[600px] overflow-hidden rounded-xl lg:rounded-3xl shadow-white mx-auto">
         {/* Video */}
         <video loop ref={videoRef} className="absolute inset-0 w-full h-full object-cover z-10" onClick={handlePlay}>
           <source src="/BoomSampling.mp4" type="video/mp4" />
@@ -42,7 +42,7 @@ const SamplingExperience = () => {
                 isIconOnly
                 variant="ghost"
                 color="default"
-                onClick={handlePlay}
+                onPress={handlePlay}
                 className="h-36 w-36 text-6xl bg-black/25 pointer-events-auto"
                 radius="full"
               >

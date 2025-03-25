@@ -3,7 +3,7 @@ import React from 'react'
 import HeadingOne from '../Headings/HeadingOne';
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { HiChevronDoubleDown } from "react-icons/hi";
-import { Fade, Slide } from 'react-awesome-reveal';
+
 
 
 const Faq = () => {
@@ -49,25 +49,24 @@ const Faq = () => {
 
 
     return (
-        <section className='px-4  pt-16 lg:py-20 lg:px-20 space-y-5 lg:space-y-10 text-center' id='FAQS'>
+        <section className='px-4  pt-16 lg:py-20 lg:px-20 space-y-10 text-center' id='FAQS'>
             <HeadingOne>
                 Frequently asked questions
             </HeadingOne>
             <div className='w-full mx-auto max-w-screen-lg '>
-            
                     <Accordion variant="splitted" selectionMode="multiple"
-                        className="gap-4  lg:gap-5  flex flex-col px-0"
+                        className="gap-8  lg:gap-10  flex flex-col px-0"
                         defaultExpandedKeys={["0"]}
                         itemClasses={{
-                            base: "bg-white text-start lg:p-4",
-                            title: `text-xl lg:text-2xl  uppercase font-semibold `,
-                            indicator: "text-primary text-3xl  data-[open=true]:-rotate-90 ",
-                            trigger: " flex items-start  ",
-                            content: 'pt-0 text-gray-500 text-sm lg:text-base font-medium'
+                            base: "bg-white text-start py-0  lg:p-4 ",
+                            title: `py-0  text-base lg:text-2xl  uppercase font-semibold `,
+                            indicator: "hover:bg-primary/20 p-1.5 rounded-full text-primary text-2xl  data-[open=true]:-rotate-90 ",
+                            trigger: " py-2 flex items-start   ",
+                            content: 'pt-0 text-gray-500 text-xs lg:text-base font-medium'
                         }}>
                         {faqs.map((faq, index) => (
 
-                            <AccordionItem key={index} aria-label={`Accordion ${index + 1}`} title={faq.question} indicator={<HiChevronDoubleDown />}>
+                            <AccordionItem className='shadow-md' key={index} aria-label={`Accordion ${index + 1}`} title={faq.question} indicator={<HiChevronDoubleDown />}>
                                 <p>{faq.answer}</p>
                             </AccordionItem>
 

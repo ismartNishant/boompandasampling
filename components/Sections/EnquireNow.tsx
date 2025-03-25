@@ -6,21 +6,24 @@ import { Button } from "@nextui-org/button";
 import { Player } from '@lottiefiles/react-lottie-player';
 import HeadingOne from "../Headings/HeadingOne";
 import { Fade, Zoom } from "react-awesome-reveal";
+import { addToast } from "@heroui/toast";
 
 const EnquireNow = () => {
-  const [phoneno, setPhoneNo] = React.useState("");
-  const [city, setCity] = React.useState("");
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
+  const [phoneno, setPhoneNo] = React.useState("");
+  const [city, setCity] = React.useState("");
+  const [businessName, setBusinessName] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
   const [emailError, setEmailError] = React.useState<string>("");
+  const [phoneError, setPhoneError] = React.useState<string>("");
 
-  // Validate email using regex
-  const validateEmail = (value: string) => {
-    return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
-  };
+  // Validate Email
+  const validateEmail = (value: string) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value);
 
+  // Validate Phone Number (only digits, 10 characters)
   const validatePhoneNumber = (value: string) => /^\d{10}$/.test(value);
-
 
   const handleInputChange = (inputValue: string, fieldName: string) => {
     switch (fieldName) {
@@ -29,156 +32,169 @@ const EnquireNow = () => {
         break;
       case "email":
         setEmail(inputValue);
-        if (inputValue === "" || validateEmail(inputValue)) {
-          setEmailError("");
-        } else {
-          setEmailError("Please enter a valid email address.");
-        }
+        setEmailError(validateEmail(inputValue) ? "" : "Invalid email format.");
         break;
       case "phone":
         const numericValue = inputValue.replace(/\D/g, "");
-        validatePhoneNumber(phoneno)
         setPhoneNo(numericValue);
-
+        setPhoneError(validatePhoneNumber(numericValue) ? "" : "Invalid phone number.");
+        break;
+      case "city":
+        setCity(inputValue);
+        break;
+      case "businessName":
+        setBusinessName(inputValue);
+        break;
+      case "message":
+        setMessage(inputValue);
+        break;
       default:
         break;
     }
   };
 
-  // Form submit handler with basic validation
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address.");
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedPhone = phoneno.trim();
+    const trimmedCity = city.trim();
+    const trimmedBusinessName = businessName.trim();
+    const trimmedMessage = message.trim();
+
+    // Validate All Fields
+    if (!trimmedName || !trimmedEmail || !trimmedPhone || !trimmedCity || !trimmedBusinessName || !trimmedMessage) {
+      addToast({ title: "All fields are required.", color: "danger" });
       return;
     }
 
-    console.log(name, email, city, phoneno);
-    setPhoneNo("");
+    if (!validateEmail(trimmedEmail)) {
+      setEmailError("Invalid email format.");
+      return;
+    }
+
+    if (!validatePhoneNumber(trimmedPhone)) {
+      setPhoneError("Invalid phone number.");
+      return;
+    }
+
+    console.log("Form Data:", { name, email, phoneno, city, businessName, message });
+
+    // Clear form after submission
     setName("");
     setEmail("");
+    setPhoneNo("");
     setCity("");
+    setBusinessName("");
+    setMessage("");
     setEmailError("");
+    setPhoneError("");
+
+    addToast({ title: "Form submitted successfully!", color: "success" });
   };
-
-  const isPhoneInvalid = phoneno !== "" && !validatePhoneNumber(phoneno);
-
 
   return (
     <section className="px-4 pt-16 lg:pt-20 lg:px-20 space-y-5 lg:space-y-16 text-center" id="enquire-now">
       <HeadingOne>Enquire with our experts for product sampling</HeadingOne>
-      <div className="grid grid-cols-1 lg:grid-cols-2  xl:gap-20 w-full">
-        <div className="relative max-w-screen-lg lg:max-w-lg flex justify-center items-center w-full mx-auto ">
-          <Zoom className="relative xl:-top-10 ">
-            <Player
-              className=" w-full xl:h-[550px]"
-              autoplay
-              loop
-              src="/Images/contact.json"
-            >
-            </Player>
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:gap-20 w-full">
+        <div className="relative max-w-screen-lg lg:max-w-lg flex justify-center items-center w-full mx-auto">
+          <Zoom className="relative xl:-top-10">
+            <Player className="w-full xl:h-[550px]" autoplay loop src="/Images/contact.json"></Player>
           </Zoom>
         </div>
-        <div className="w-full mx-auto ">
+        <div className="w-full mx-auto">
           <Fade>
-            <Form className="w-full" onSubmit={handleFormSubmit} >
-              <div className="space-y-5 w-full bg-primary-50/30 shadow  p-4 rounded-xl">
+            <Form className="w-full" onSubmit={handleFormSubmit}>
+              <div className="space-y-5 w-full bg-primary-50/30 shadow p-5 lg:p-10 rounded-xl">
                 <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
                   <Fade>
                     <Input
                       isClearable
                       isRequired
-                      required
-                      className=""
-                      id="FullName"
                       label="Name"
-                      name="fullname"
                       type="text"
                       value={name}
                       variant="bordered"
-                      onValueChange={(inputValue) =>
-                        handleInputChange(inputValue, "name")
-                      }
+                      onValueChange={(inputValue) => handleInputChange(inputValue, "name")}
+                      classNames={{ label: "!text-black ", inputWrapper: "data-[focus=true]:bg-rose-200 text-black " }}
                     />
                   </Fade>
+
                   <Fade>
                     <Input
                       isClearable
                       isRequired
-                      required
-                      className=""
-                      color={emailError ? "danger" : email ? "success" : "default"}
-                      errorMessage={emailError || "Please enter a valid email"}
-                      id="UserEmail"
-                      isInvalid={!!emailError}
                       label="Email"
-                      name="useremail"
                       type="email"
                       value={email}
                       variant="bordered"
-                      onValueChange={(inputValue) =>
-                        handleInputChange(inputValue, "email")
-                      }
+                      color={emailError ? "danger" : email ? "success" : "default"}
+                      errorMessage={emailError}
+                      isInvalid={!!emailError}
+                      onValueChange={(inputValue) => handleInputChange(inputValue, "email")}
+                      classNames={{ label: "!text-black ", inputWrapper: "data-[focus=true]:bg-rose-200 text-black " }}
                     />
                   </Fade>
+
                   <Fade>
                     <Input
                       isClearable
                       isRequired
-                      required
-                      color={
-                        isPhoneInvalid ? "danger" : phoneno ? "success" : "default"
-                      }
-                      errorMessage="Please enter a valid 10-digit phone number"
-                      id="phoneNumber"
-                      inputMode="numeric" // Hint for mobile numeric keypad
-                      isInvalid={isPhoneInvalid}
                       label="Phone No"
-                      maxLength={10}
-                      name="mobilenumber"
-                      pattern="[0-9]*"
                       type="tel"
                       value={phoneno}
+                      maxLength={10}
                       variant="bordered"
-                      onValueChange={(inputValue) =>
-                        handleInputChange(inputValue, "phone")
-                      }
+                      inputMode="numeric"
+                      color={phoneError ? "danger" : phoneno ? "success" : "default"}
+                      errorMessage={phoneError}
+                      isInvalid={!!phoneError}
+                      onValueChange={(inputValue) => handleInputChange(inputValue, "phone")}
+                      classNames={{ label: "!text-black ", inputWrapper: "data-[focus=true]:bg-rose-200 text-black " }}
                     />
                   </Fade>
+
                   <Fade>
                     <Input
                       isClearable
                       isRequired
-                      required
-                      className=""
                       label="City"
                       type="text"
+                      value={city}
                       variant="bordered"
+                      onValueChange={(inputValue) => handleInputChange(inputValue, "city")}
+                      classNames={{ label: "!text-black ", inputWrapper: "data-[focus=true]:bg-rose-200 text-black " }}
                     />
                   </Fade>
                 </div>
+
                 <Fade>
                   <Input
                     isClearable
                     isRequired
-                    required
-                    className=""
                     label="Business Name"
                     type="text"
+                    value={businessName}
                     variant="bordered"
+                    onValueChange={(inputValue) => handleInputChange(inputValue, "businessName")}
+                    classNames={{ label: "!text-black ", inputWrapper: "data-[focus=true]:bg-rose-200 text-black " }}
                   />
                 </Fade>
+
                 <Fade>
                   <Textarea
                     isRequired
-                    required
                     label="Message"
                     variant="bordered"
+                    value={message}
+                    onValueChange={(inputValue) => handleInputChange(inputValue, "message")}
+                    classNames={{ label: "!text-black ", inputWrapper: "data-[focus=true]:bg-rose-200 text-black " }}
                   />
                 </Fade>
+
                 <Zoom>
-                  <Button className="uppercase text-lg font-extrabold h-12 rounded-full w-52 hover:scale-95 duration-300 ease-in-out" color="primary" >
+                  <Button type="submit" className="uppercase text-lg font-extrabold h-12 rounded-full w-52 hover:scale-95 duration-300 ease-in-out" color="primary">
                     Submit
                   </Button>
                 </Zoom>

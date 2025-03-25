@@ -40,6 +40,14 @@ const Header = () => {
     { href: isHomePage ? "#enquire-now" : "/#enquire-now", label: "Enquire-now" },
   ];
 
+  const mobilelinks = [
+    { href: "/", label: "Home" },
+    { href: isHomePage ? "#about-us" : "/#about-us", label: "About Us" },
+    { href: isHomePage ? "#how-it-works" : "/#how-it-works", label: "How it Works" },
+    { href: isHomePage ? "#FAQS" : "/#FAQS", label: "FAQs" },
+    { href: isHomePage ? "#enquire-now" : "/#enquire-now", label: "Enquire Now" },
+];
+
 
   return (
     <header className={`text-black w-full fixed top-0 z-50 overflow-hidden ${animateHeader ? "shadow-md" : ""} border-none `}>
@@ -49,14 +57,12 @@ const Header = () => {
           <Link href="/" className="flex items-center justify-center sm:justify-start space-x-1">
             <Image
               alt="logo"
-              className="object-contain w-32 sm:w-32 md:w-40 "
+              className="object-contain  sm:w-48 md:w-56 "
               height={40}
-              src="/Images/logo.png"
+              src="/Images/logo.svg"
               width={180}
             />
-            <h1 className="text-2xl sm:text-[32px]  font-nunito tracking-normal font-medium">
-              Sampling
-            </h1>
+           
           </Link>
         </Zoom>
 
@@ -99,7 +105,7 @@ const Header = () => {
             </button>
 
             <nav className="flex flex-col  space-y-12  text-2xl font-semibold  pt-20">
-              {links.map((link) => (
+              {mobilelinks.map((link) => (
                 <Link
                   key={link.label}
                   className={`hover:text-primary relative tracking-wide no-underline after:rounded-md after:absolute after:h-1 after:left-0 after:-bottom-2 after:bg-primary after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease-in group duration-300 ease-in transition-all`}

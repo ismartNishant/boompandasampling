@@ -37,14 +37,14 @@ const perksData = [
 
 const PerksOfSampling = () => {
     return (
-        <section className="px-4 pt-14 lg:px-20 lg:space-y-5">
-            <HeadingOne>Perks of Boom Sampling</HeadingOne>
+        <section className="px-4 pt-14 lg:px-20 space-y-5 lg:space-y-10">
+            <HeadingOne className='text-left'>Perks of Boom Sampling</HeadingOne>
+            <Fade>
+                <p className="text-gray-600 font-medium w-full lg:w-1/2  test-base lg:text-xl">
+                    Strategised campaigns to target the right audience, understand sentiments, and use those findings for a cost-effective launch.
+                </p>
+            </Fade>
             <div className="space-y-10">
-                <Fade>
-                    <p className="text-gray-600 font-medium w-full lg:w-1/2  test-base lg:text-xl">
-                        Strategised campaigns to target the right audience, understand sentiments, and use those findings for a cost-effective launch.
-                    </p>
-                </Fade>
                 <div className="grid  mx-auto justify-center gap-5 lg:gap-0">
                     {perksData.map((perk, index) => (
                         <div key={perk.id}
@@ -60,10 +60,10 @@ const PerksOfSampling = () => {
                             </Zoom>
 
                             {/* Content Section */}
-                            <Fade  className='w-full lg:max-w-2xl'>
-                                <div className="flex flex-col gap-3 lg:gap-5 justify-center  bg-gradient-to-br from-primary-300  px-2 lg:px-5 py-5 lg:py-16 to-primary text-white rounded-xl">
+                            <Fade className='w-full lg:max-w-2xl'>
+                                <div className="flex flex-col gap-3 lg:gap-5 justify-center  bg-gradient-to-br from-primary-300  px-4 lg:px-5 py-5 lg:py-16 to-primary text-white rounded-xl">
                                     <Slide direction='down'> <h2 className="text-4xl lg:text-5xl font-semibold">{perk.title}</h2></Slide>
-                                    <Slide direction='down'><p className="text-lg">{perk.description}</p></Slide>
+                                    <Slide direction='down'><p className="text-base lg:text-lg">{perk.description}</p></Slide>
                                 </div>
                             </Fade>
                         </div>

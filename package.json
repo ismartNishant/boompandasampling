@@ -10,6 +10,9 @@
 	},
 	"dependencies": {
 		"@emotion/react": "^11.14.0",
+		"@heroui/system": "^2.4.11",
+		"@heroui/theme": "^2.4.11",
+		"@heroui/toast": "^2.0.5",
 		"@lottiefiles/react-lottie-player": "^3.5.4",
 		"@nextui-org/accordion": "^2.2.6",
 		"@nextui-org/button": "2.2.3",

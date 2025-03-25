@@ -21,21 +21,21 @@ const Policy = () => {
       <div className="flex flex-col gap-5 py-8 md:py-16 text-sm md:text-lg">
         <div className="flex flex-col gap-4">
           <p>
-            Welcome to Our Website, www.tantrawave.com (“Website”) may be
+            Welcome to Our Website, www.boomsampling.com (“Website”) may be
             referred to as “Platform(s)” hereafter. This Privacy Policy
             (“Policy”) describes the personal data collected or generated when
             You use or access the Platform(s) and how Your personal data is
             collected, processed, used, stored and protected.
           </p>
           <p>
-            The domain name www.tantrawave.com is owned by Genjee Technologies
+            The domain name www.boomsampling.com is owned by Genjee Technologies
             Private Limited incorporated under the Companies Act, 2013 bearing
             CIN and having its registered office at S NO 118/4, H NO 1968,
             Highway Residency, Sonaba Mahadu Saykar Path, Baner Gaon, Pune,
             Pune, Maharashtra, 411045
           </p>
           <p>
-            (“Tantrawave” or “Us” or “We” or “Our”). We are concerned about the
+            (“Boomsampling” or “Us” or “We” or “Our”). We are concerned about the
             privacy of the users accessing Our Platform(s) (“You” or “Your” or
             “Yourself”).
           </p>
@@ -98,7 +98,7 @@ const Policy = () => {
             Student Status Information may include Information relating to Your
             student status such as Your school/ college/ university name,
             university graduation year, university course name or area. When You
-            verify Your student status on Tantrawave, You can chose a number of
+            verify Your student status on Boomsampling, You can chose a number of
             methods to verify and some these methods may require extra data. You
             can chose how You verify and which personal data to provide as long
             as it meets Our verification requirements.
@@ -383,11 +383,11 @@ const Policy = () => {
             organizations established outside of the EU if they: (i) process the
             personal data of EU data subjects when offering them goods or
             services; or (ii) monitor the behavior of EU data subjects.
-            Tantrawave neither offers goods or services to EU data subjects nor
+            Boomsampling neither offers goods or services to EU data subjects nor
             monitors their behavior. Therefore, the GDPR does not directly apply
             to Us. However, We may work with organizations that collect or
             process personal data of EU data subjects, that are subject to the
-            GDPR. Tantrawave agrees to implement appropriate technical and
+            GDPR. Boomsampling agrees to implement appropriate technical and
             organizational security measures to provide a level of security
             appropriate to the risks that are presented by the processing and
             the nature of the personal data to be protected. In all such

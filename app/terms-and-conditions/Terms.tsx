@@ -22,16 +22,16 @@ const TermsAndConditions = () => {
         <div className="flex items-center gap-2">
           Welcome to{" "}
           <Link className="text-primary font-medium" href="/">
-            Tantrawave !{" "}
+            Boomsampling !{" "}
           </Link>
         </div>
         <div className="flex flex-col gap-4">
           <p>
-            The domain name www.tantrawave.com is owned by Genjee Technologies
+            The domain name www.boomsampling.com is owned by Genjee Technologies
             Private Limited, company incorporated under the Companies Act, 2013
             having its registered office at S NO 118/4, H NO 1968, Highway
             Residency, Sonaba Mahadu Saykar Path, Baner Gaon, Pune, Pune,
-            Maharashtra, 411045 (“Tantrawave” or “Us” or “We”or “Our”). The
+            Maharashtra, 411045 (“Boomsampling” or “Us” or “We”or “Our”). The
             Website is internet-based portal, owned and operated by Genjee
             Technologies Private Limited, that assist users to access various
             benefits such as, but not limited to, completing missions, projects,
@@ -40,12 +40,12 @@ const TermsAndConditions = () => {
           </p>
           <p>
             These terms and conditions outline the rules and regulations for the
-            use of Website www.tantrawave.com (hereinafter referred to as
-            “Tantrawave” or “Platform” or “Website”)
+            use of Website www.boomsampling.com (hereinafter referred to as
+            “Boomsampling” or “Platform” or “Website”)
           </p>
           <p>
             These terms and conditions (&quot;Agreement&quot;) sets forth the
-            general terms and conditions of your use of the Tantrawave and any
+            general terms and conditions of your use of the Boomsampling and any
             of its related products and services (collectively,
             &quot;Services&quot;). This Agreement is legally binding between all
             users including users who are browsers, content providers, customers
@@ -100,7 +100,7 @@ const TermsAndConditions = () => {
             Products or any pending pending payments from our side. We may block
             your email address and Internet protocol address to prevent further
             registration.This Agreement will survive indefinitely unless and
-            until Tantrawave chooses, in its sole discretion and without advance
+            until Boomsampling chooses, in its sole discretion and without advance
             to you, to terminate it.
           </p>
         </div>
@@ -117,7 +117,7 @@ const TermsAndConditions = () => {
             the legal guardian or parents, as the case may be.
           </p>
           <p>
-            Tantrawave will not collect any personal data from minors. We
+            Boomsampling will not collect any personal data from minors. We
             encourage parents and legal guardians to monitor their minor
             dependent’s usage on the Platform and urge them in enforcing Our
             Privacy Policy by instructing their minor dependents not to provide
@@ -134,7 +134,7 @@ const TermsAndConditions = () => {
             Users to create a student profile, submit their details in order to
             find and apply for and get access to various benefits such as
             completing tasks,missions, gigs, offers, part time jobs, projects,
-            internship opportunities (collectively “Activities”) on Tantrawave
+            internship opportunities (collectively “Activities”) on Boomsampling
             (“Services”). The Platform(s) may be accessed without any
             registration. However, We shall be enabling registrations through
             which You can register with Us and enjoy Our Services from one
@@ -146,7 +146,7 @@ const TermsAndConditions = () => {
             create a User Profile (“User Profile”) through which You can avail
             our Services. While we put our best efforts to help You find a
             suitable Activities, however, posting your details and applying for
-            Activities on Tantrawave does not guarantee you earning money. By
+            Activities on Boomsampling does not guarantee you earning money. By
             applying for Activities through Our Platform,{" "}
             <span className="font-semibold text-primary tracking-wider">
               {" "}
@@ -154,16 +154,16 @@ const TermsAndConditions = () => {
               conditions of the Company and it is Your responsibility to review
               such terms and conditions before{" "}
             </span>
-            accepting any offer of Activities with that Company. Tantrawave
+            accepting any offer of Activities with that Company. Boomsampling
             shall place the information relating to Activities in appropriate
             sections on the Platform or in allied publications as We may deem
-            fit and proper. Tantrawave reserves its right to reject or delete
+            fit and proper. Boomsampling reserves its right to reject or delete
             any insertion or information/data provided by the Company without
             assigning any reason either before uploading or after uploading the
-            details of the Activities. Tantrawave further reserves the right to
+            details of the Activities. Boomsampling further reserves the right to
             make all such modifications/editing of the vacancy details before
             displaying such posts on its Platform. If You are an Company and
-            post Activities on the Platform, You hereby grant Tantrawave a
+            post Activities on the Platform, You hereby grant Boomsampling a
             non-exclusive right and license to use Your company trademarks and
             service marks, including without limitation company names and logos,
             solely in connection with marketing and promoting the Activities You
@@ -176,7 +176,7 @@ const TermsAndConditions = () => {
             Cookies
           </h1>
           <p className="italic">
-            We employ the use of cookies. By accessing Tantrawave, you agreed to
+            We employ the use of cookies. By accessing Boomsampling, you agreed to
             use cookies in agreement with the our Privacy Policy.
           </p>
           <p>
@@ -260,7 +260,7 @@ const TermsAndConditions = () => {
             returned or the sale reversed or amended by any means, then the
             reward/cashback payment will not be made. Apart from the
             Brand/Retailer, it is also mandatory for the members to intimate
-            Tantrawave about any returns or exchanges for which they might have
+            Boomsampling about any returns or exchanges for which they might have
             earned cashback unduly.
           </p>
           <p>
@@ -301,7 +301,7 @@ const TermsAndConditions = () => {
             paid a manual commission claim after a period of six months, then we
             reserve the right to close the enquiry claim. All payment for
             Missing Reward/Cashback is only applicable in instances where the
-            Brand/Retailer pays Tantrawave.
+            Brand/Retailer pays Boomsampling.
           </p>
           <p>
             We reserve the right to reclaim or make balance adjustments
@@ -314,7 +314,7 @@ const TermsAndConditions = () => {
             your Account, or for transactions which have already been paid over
             to you by Paytm,NEFT, Cheque, Gift Cards or any other payment modes
             as We may introduce from time to time. In all such incidences,
-            Tantrawave has the right to recover all unduly paid cashback which
+            Boomsampling has the right to recover all unduly paid cashback which
             the member is not entitled to earn, through legal proceedings.
           </p>
           <p>
@@ -349,7 +349,7 @@ const TermsAndConditions = () => {
           </p>
           <p>
             In case of any Activity or Offer has been stopped by us (i.e.
-            Tantrawave) due to any reason and if the user has already paid for
+            Boomsampling) due to any reason and if the user has already paid for
             that particular Activity or Offer, the refund amount (for which
             refund has been subsequently received from the respective
             third-party/parties), the Company may issue BoomCoins of an
@@ -359,7 +359,7 @@ const TermsAndConditions = () => {
           <p>
             We are not liable to pay any refunds to the users for any
             cancellations if they are not caused directly by us (i.e.
-            Tantrawave), any third party/parties are responsible for it where we
+            Boomsampling), any third party/parties are responsible for it where we
             have already transferred the amount to the third party/parties and
             we have yet not received the refund from the concerned third
             party/parties.
@@ -394,7 +394,7 @@ const TermsAndConditions = () => {
             Products or any pending pending payments from our side. We may block
             your email address and Internet protocol address to prevent further
             registration.This Agreement will survive indefinitely unless and
-            until Tantrawave chooses, in its sole discretion and without advance
+            until Boomsampling chooses, in its sole discretion and without advance
             to you, to terminate it.
           </p>
         </div>
@@ -493,29 +493,29 @@ const TermsAndConditions = () => {
           </p>
           <p>You must not :</p>
           <ol className="list-disc ml-2">
-            <li className="py-1">Republish material from Tantrawave</li>
+            <li className="py-1">Republish material from Boomsampling</li>
             <li className="py-1">
-              Sell, rent or sub-license material from Tantrawave
+              Sell, rent or sub-license material from Boomsampling
             </li>
             <li className="py-1">
-              Reproduce, duplicate or copy material from Tantrawave
+              Reproduce, duplicate or copy material from Boomsampling
             </li>
-            <li className="py-1">Redistribute content from Tantrawave</li>
+            <li className="py-1">Redistribute content from Boomsampling</li>
           </ol>
           <p>
             Parts of this website offer an opportunity for users to post and
             exchange opinions and information in certain areas of the website.
-            Tantrawave does not filter, edit, publish or review Comments prior
+            Boomsampling does not filter, edit, publish or review Comments prior
             to their presence on the website. Comments do not reflect the views
-            and opinions of Tantrawave, its agents and/or affiliates. Comments
+            and opinions of Boomsampling, its agents and/or affiliates. Comments
             reflect the views and opinions of the person who post their views
-            and opinions. To the extent permitted by applicable laws, Tantrawave
+            and opinions. To the extent permitted by applicable laws, Boomsampling
             shall not be liable for the Comments or for any liability, damages
             or expenses caused and/or suffered as a result of any use of and/or
             posting of and/or appearance of the Comments on this website.
           </p>
           <p>
-            Tantrawave reserves the right to monitor all Comments and to remove
+            Boomsampling reserves the right to monitor all Comments and to remove
             any Comments which can be considered inappropriate, offensive or
             causes breach of these Terms and Conditions.
           </p>
@@ -531,7 +531,7 @@ const TermsAndConditions = () => {
             unlawful activity.
           </p>
           <p>
-            You hereby grant Tantrawave a non-exclusive license to use,
+            You hereby grant Boomsampling a non-exclusive license to use,
             reproduce, edit and authorize others to use, reproduce and edit any
             of your Comments in any and all forms, formats or media.
           </p>
@@ -591,7 +591,7 @@ const TermsAndConditions = () => {
             that: (a) the link would not make us look unfavorably to ourselves
             or to our accredited businesses; (b) the organization does not have
             any negative records with us; (c) the benefit to us from the
-            visibility of the hyperlink compensates the absence of Tantrawave;
+            visibility of the hyperlink compensates the absence of Boomsampling;
             and (d) the link is in the context of general resource information.
           </p>
           <p>
@@ -604,7 +604,7 @@ const TermsAndConditions = () => {
           <p>
             f you are one of the organizations listed in paragraph 2 above and
             are interested in linking to our website, you must inform us by
-            sending an e-mail to Tantrawave (hello@tantrawave.com). Please
+            sending an e-mail to Boomsampling (hello@globalkartel.com). Please
             include your name, your organization name, contact information as
             well as the URL of your site, a list of any
           </p>
@@ -626,7 +626,7 @@ const TermsAndConditions = () => {
             </li>
           </ol>
           <p>
-            No use of Tantrawave’s or Genjee Technologies Private Limited&apos;s
+            No use of Boomsampling’s or Genjee Technologies Private Limited&apos;s
             logo or other artwork will be allowed for linking absent a trademark
             license agreement.
           </p>
@@ -646,7 +646,7 @@ const TermsAndConditions = () => {
           <p>
             If you find any link on our Website that is offensive for any
             reason, you are free to contact and inform us any moment by sending
-            an email to Tantrawave (hello@tantrawave.com). We will consider
+            an email to Boomsampling (hello@globalkartel.com). We will consider
             requests to remove links but we are not obligated to or so or to
             respond to you directly.
           </p>
@@ -700,7 +700,7 @@ const TermsAndConditions = () => {
             MARKETING
           </h1>
           <p>
-            Tantrawave will send marketing e-mails and / or sms, phone calls
+            Boomsampling will send marketing e-mails and / or sms, phone calls
             where You have provided consent for the same. We offer regular
             emails, including a weekly update, to let You know about new
             Activities. We may personalise the message content based upon any
@@ -710,14 +710,14 @@ const TermsAndConditions = () => {
             information which we hold about You to show you relevant advertising
             on third party websites (e.g. Facebook, Google, Instagram, Snapchat
             and Twitter etc.). This could involve showing You an advertising
-            message where We know You have a Tantrawave User Profile and have
+            message where We know You have a Boomsampling User Profile and have
             used Our Services. If You don’t want to be shown targeted
-            advertising messages from Tantrawave or some third party websites,
+            advertising messages from Boomsampling or some third party websites,
             these websites allow You to request not to see messages from
             specific advertisers on that website in future. The User hereby
-            agrees that Tantrawave may share the personal information of a User
+            agrees that Boomsampling may share the personal information of a User
             with other entities, provided that such other entities conform to
-            the data protection policies of Tantrawave.
+            the data protection policies of Boomsampling.
           </p>
         </div>
         <div className="flex flex-col gap-4">
@@ -821,7 +821,7 @@ const TermsAndConditions = () => {
           </h1>
           <p>
             If You come across any abuse or violation of these Terms or Privacy
-            Policy by any user, please report to hello@tantrawave.com. We shall
+            Policy by any user, please report to hello@globalkartel.com. We shall
             process all claims of abuse which may result in removing the
             reported User from Our Platform and/or suspension or termination of
             the account of the User. If the aggrieved User feels that he has
@@ -847,7 +847,7 @@ const TermsAndConditions = () => {
           <p>
             If you would like to contact us to understand more about this
             Agreement or wish to contact us concerning any matter relating to
-            it, you may send an email to hello@tantrawave.com
+            it, you may send an email to hello@globalkartel.com
           </p>
         </div>
         <div className="flex flex-col gap-4">
